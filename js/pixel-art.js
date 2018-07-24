@@ -20,6 +20,19 @@ var nombreColores = ['White', 'LightYellow',
   'DimGray', 'LightSlateGray', 'DarkSlateGray', 'Black'
 ];
 
+const paleta = document.getElementById('paleta');
+const grillaPixeles = document.getElementById('grilla-pixeles');
+
+/*Se genera paleta de colores dinámicamente recorriendo nombreColores. Se crea un div por cada color, se cambia el color del fondo del mismo
+Y se agrega como hijo de la constante paleta*/
+for (let i = 0; i < nombreColores.length; i++){
+  let divColoresRecorridos = document.createElement('div');
+  divColoresRecorridos.background = 'color';
+  divColoresRecorridos.className = '.color-paleta';
+  paleta.appendChild(divColoresRecorridos);  
+}
+
+
 // Variable para guardar el elemento 'color-personalizado'
 // Es decir, el que se elige con la rueda de color.
 var colorPersonalizado = document.getElementById('color-personalizado');

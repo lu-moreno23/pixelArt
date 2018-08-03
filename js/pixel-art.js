@@ -20,17 +20,35 @@ var nombreColores = ['White', 'LightYellow',
   'DimGray', 'LightSlateGray', 'DarkSlateGray', 'Black'
 ];
 
+//Selecciono elementos paleta y grilla-pixeles del DOM y lo guardo en dos variables
 const paleta = document.getElementById('paleta');
 const grillaPixeles = document.getElementById('grilla-pixeles');
 
 /*Se genera paleta de colores dinámicamente recorriendo nombreColores. Se crea un div por cada color, se cambia el color del fondo del mismo
 Y se agrega como hijo de la constante paleta*/
-for (let i = 0; i < nombreColores.length; i++){
-  let divColoresRecorridos = document.createElement('div');
-  divColoresRecorridos.background = 'color';
-  divColoresRecorridos.className = '.color-paleta';
-  paleta.appendChild(divColoresRecorridos);  
+function generarPaletaColores(){
+  for (let i = 0; i < nombreColores.length; i++){
+    let divColoresRecorridos = document.createElement('div');
+    divColoresRecorridos.className = '.color-paleta';
+    divColoresRecorridos.background = color;
+    paleta.appendChild(divColoresRecorridos);  
+  }
 }
+
+//Se genera donde el usuario podria pintar
+
+function generarGrilla(){
+  for (i = 0; i < 1750; i++){
+      let nuevaGrilla = document.createElement('div');
+      grillaPixeles.appendChild(nuevaGrilla);
+
+  }
+}
+
+generarPaletaColores();
+generarGrilla();
+
+//Funcion para la seleccion de colores
 
 
 // Variable para guardar el elemento 'color-personalizado'

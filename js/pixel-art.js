@@ -1,4 +1,4 @@
-var nombreColores = ['White', 'LightYellow',
+var nombresDeColores = ['White', 'LightYellow',
   'LemonChiffon', 'LightGoldenrodYellow', 'PapayaWhip', 'Moccasin', 'PeachPuff', 'PaleGoldenrod', 'Bisque', 'NavajoWhite', 'Wheat', 'BurlyWood', 'Tan',
   'Khaki', 'Yellow', 'Gold', 'Orange', 'DarkOrange', 'OrangeRed', 'Tomato', 'Coral', 'DarkSalmon', 'LightSalmon', 'LightCoral', 'Salmon', 'PaleVioletRed',
   'Pink', 'LightPink', 'HotPink', 'DeepPink', 'MediumVioletRed', 'Crimson', 'Red', 'FireBrick', 'DarkRed', 'Maroon',
@@ -27,11 +27,11 @@ const grillaPixeles = document.getElementById('grilla-pixeles');
 /*Se genera paleta de colores dinámicamente recorriendo nombreColores. Se crea un div por cada color, se cambia el color del fondo del mismo
 Y se agrega como hijo de la constante paleta*/
 function generarPaletaColores(){
-  for (let i = 0; i < nombreColores.length; i++){
-    let divColoresRecorridos = document.createElement('div');
-    divColoresRecorridos.className = '.color-paleta';
-    divColoresRecorridos.background = color;
-    paleta.appendChild(divColoresRecorridos);  
+  for (let i = 0; i < nombresDeColores.length; i++){
+    let coloresRecorridos = document.createElement('div');
+    coloresRecorridos.className = 'color-paleta';
+    coloresRecorridos.style.backgroundColor = nombresDeColores[i];
+    paleta.appendChild(coloresRecorridos);  
   }
 }
 

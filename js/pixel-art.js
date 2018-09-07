@@ -58,9 +58,8 @@ function mostrarSeleccionColor(e){
   colorClickeado.style.backgroundColor = e.target.style.backgroundColor;
 }
 
-//Funcion para pintar grilla
+//Funcion para pintar un pixel de la grilla
 
-//let colorSeleccionadoParaPintar = document.getElementById("grilla-pixeles");
 grillaPixeles.addEventListener("click",pintarPixel);
 
 function pintarPixel(e){
@@ -68,20 +67,19 @@ function pintarPixel(e){
 }
 
 
-/*let colorClickeado = document.getElementById('indicador-de-color').addEventListener('click', function(e){
-  e.target.value="color-paleta";
-});*/
-
 // Variable para guardar el elemento 'color-personalizado'
 // Es decir, el que se elige con la rueda de color.
 var colorPersonalizado = document.getElementById('color-personalizado');
 
 colorPersonalizado.addEventListener('change', 
-  (function() {
+  (function(e) {
     // Se guarda el color de la rueda en colorActual
     colorActual = colorPersonalizado.value;
     // Completar para que cambie el indicador-de-color al colorActual
-
+    colorClickeado.style.backgroundColor = colorActual;
 
   })
 );
+
+//Funcion para pintar con color personalizado
+

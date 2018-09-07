@@ -21,7 +21,7 @@ var nombresDeColores = ['White', 'LightYellow',
 ];
 
 //Selecciono elementos paleta y grilla-pixeles del DOM y lo guardo en dos variables
-let paleta = document.getElementById('paleta');
+const paleta = document.getElementById('paleta');
 const grillaPixeles = document.getElementById('grilla-pixeles');
 
 /*Se genera paleta de colores dinámicamente recorriendo nombreColores. Se crea un div por cada color, se cambia el color del fondo del mismo
@@ -56,6 +56,15 @@ paleta.addEventListener("click",mostrarSeleccionColor);
 
 function mostrarSeleccionColor(e){
   colorClickeado.style.backgroundColor = e.target.style.backgroundColor;
+}
+
+//Funcion para pintar grilla
+
+//let colorSeleccionadoParaPintar = document.getElementById("grilla-pixeles");
+grillaPixeles.addEventListener("click",pintarPixel);
+
+function pintarPixel(e){
+  e.target.style.backgroundColor = colorClickeado.style.backgroundColor;
 }
 
 

@@ -21,7 +21,7 @@ var nombresDeColores = ['White', 'LightYellow',
 ];
 
 //Selecciono elementos paleta y grilla-pixeles del DOM y lo guardo en dos variables
-const paleta = document.getElementById('paleta');
+let paleta = document.getElementById('paleta');
 const grillaPixeles = document.getElementById('grilla-pixeles');
 
 /*Se genera paleta de colores dinámicamente recorriendo nombreColores. Se crea un div por cada color, se cambia el color del fondo del mismo
@@ -50,6 +50,18 @@ generarGrilla();
 
 //Funcion para la seleccion de colores
 
+let colorClickeado = document.getElementById("indicador-de-color");
+paleta.addEventListener("click",mostrarSeleccionColor);
+
+
+function mostrarSeleccionColor(e){
+  colorClickeado.style.backgroundColor = e.target.style.backgroundColor;
+}
+
+
+/*let colorClickeado = document.getElementById('indicador-de-color').addEventListener('click', function(e){
+  e.target.value="color-paleta";
+});*/
 
 // Variable para guardar el elemento 'color-personalizado'
 // Es decir, el que se elige con la rueda de color.

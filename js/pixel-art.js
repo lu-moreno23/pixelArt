@@ -85,34 +85,26 @@ colorPersonalizado.addEventListener('change',
 
 let verificarSiHayClick;
 
-grillaPixeles.addEventListener('click', mouseClickeado);
+grillaPixeles.addEventListener('mousedown', mouseClickeado);
+grillaPixeles.addEventListener('mouseup', mouseNoClickeado);
 
 function mouseClickeado(e){
-  verificarSiHayClick = true;
-  console.log("click")
+  verificarSiHayClick = true;  
+  console.log("click");
 }
-
-
-
-//function(e){
-//if (e.which) verificarSiHayClick = true;
-//console.log("Hola");
-//});
-
-
-grillaPixeles.addEventListener('mouseover', mouseNoClickeado);
 
 function mouseNoClickeado (e){
-  verificarSiHayClick = true;
-  console.log("no click")
+  verificarSiHayClick = false;
+  console.log("no click");
 }
 
+//Pintar en movimiento
 
+grillaPixeles.addEventListener('mouseover',pintarMientrasSeMueveElMouse);
 
-
-//function(e){
-//  if (e.which) verificarSiHayClick = false;
-//  console.log("No Hay Click");
-//});
-
+function pintarMientrasSeMueveElMouse(e){
+  if (verificarSiHayClick){
+    e.target.style.backgroundColor = colorClickeado.style.backgroundColor;
+  }
+}
 

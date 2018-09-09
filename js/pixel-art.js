@@ -81,5 +81,38 @@ colorPersonalizado.addEventListener('change',
   })
 );
 
-//Funcion para pintar con color personalizado
+//Funcion para detectar si el mouse esta apretado o no
+
+let verificarSiHayClick;
+
+grillaPixeles.addEventListener('click', mouseClickeado);
+
+function mouseClickeado(e){
+  verificarSiHayClick = true;
+  console.log("click")
+}
+
+
+
+//function(e){
+//if (e.which) verificarSiHayClick = true;
+//console.log("Hola");
+//});
+
+
+grillaPixeles.addEventListener('mouseover', mouseNoClickeado);
+
+function mouseNoClickeado (e){
+  verificarSiHayClick = true;
+  console.log("no click")
+}
+
+
+
+
+//function(e){
+//  if (e.which) verificarSiHayClick = false;
+//  console.log("No Hay Click");
+//});
+
 

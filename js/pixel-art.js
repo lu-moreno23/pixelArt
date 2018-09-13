@@ -47,6 +47,12 @@ function generarGrilla(){
 
 generarPaletaColores();
 generarGrilla();
+borrarGrillaPixeles();
+
+//Borrar grilla
+
+
+
 
 //Funcion para la seleccion de colores
 
@@ -108,3 +114,11 @@ function pintarMientrasSeMueveElMouse(e){
   }
 }
 
+function borrarGrillaPixeles(){
+  const grillaABorrar = $("#grilla-pixeles").find("div");
+$("button").click(function(){
+  $(grillaABorrar).fadeOut(1000);
+  generarGrilla();
+  }
+);
+}

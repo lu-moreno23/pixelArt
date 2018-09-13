@@ -54,7 +54,7 @@ borrarGrillaPixeles();
 function borrarGrillaPixeles(){
 $("button").click(function(){
   const grillaABorrar = $("#grilla-pixeles").find("div");
-  $(grillaABorrar).fadeOut(100);
+  $(grillaABorrar).fadeOut(10);
   generarGrilla();
   }
 );

@@ -51,7 +51,14 @@ borrarGrillaPixeles();
 
 //Borrar grilla
 
-
+function borrarGrillaPixeles(){
+$("button").click(function(){
+  const grillaABorrar = $("#grilla-pixeles").find("div");
+  $(grillaABorrar).fadeOut(100);
+  generarGrilla();
+  }
+);
+}
 
 
 //Funcion para la seleccion de colores
@@ -114,11 +121,3 @@ function pintarMientrasSeMueveElMouse(e){
   }
 }
 
-function borrarGrillaPixeles(){
-  const grillaABorrar = $("#grilla-pixeles").find("div");
-$("button").click(function(){
-  $(grillaABorrar).fadeOut(1000);
-  generarGrilla();
-  }
-);
-}

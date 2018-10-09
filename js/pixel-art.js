@@ -60,7 +60,6 @@ $("button").click(function(){
 );
 }
 
-
 //Funcion para la seleccion de colores
 
 let colorClickeado = document.getElementById("indicador-de-color");
@@ -120,4 +119,11 @@ function pintarMientrasSeMueveElMouse(e){
     e.target.style.backgroundColor = colorClickeado.style.backgroundColor;
   }
 }
+
+
+//Cargar superheroe en grilla
+
+$(".imgs").find("img").click(cargarSuperheroe(superheroe));
+
+//cargarSuperheroe(batman);
 

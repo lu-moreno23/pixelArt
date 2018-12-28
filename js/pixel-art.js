@@ -38,7 +38,7 @@ function generarPaletaColores(){
 //Se genera donde el usuario podria pintar
 
 function generarGrilla(){
-  for (i = 0; i < 1750; i++){
+  for (let i = 0; i < 1750; i++){
       let nuevaGrilla = document.createElement('div');
       grillaPixeles.appendChild(nuevaGrilla);
 
@@ -52,7 +52,7 @@ borrarGrillaPixeles();
 //Borrar grilla
 
 function borrarGrillaPixeles(){
-$("button").click(function(){
+$("#borrar").click(function(){
   const grillaABorrar = $("#grilla-pixeles").find("div");
   $(grillaABorrar).fadeOut(10);
   generarGrilla();
@@ -123,7 +123,14 @@ function pintarMientrasSeMueveElMouse(e){
 
 //Cargar superheroe en grilla
 
-$(".imgs").find("img").click(cargarSuperheroe(superheroe));
+let seleccionarSuperheroe = document.getElementsByClassName("imgs");
+imgs.addEventListener("click",cargarSuperheroeEnGrilla);
 
-//cargarSuperheroe(batman);
+function cargarSuperheroeEnGrilla(e,superheroe){
+  cargarSuperheroe(superheroe);
+}
+
+//Guardar pixelArt
+
+$("#guardar").click(guardarPixelArt);
 

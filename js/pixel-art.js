@@ -123,14 +123,23 @@ function pintarMientrasSeMueveElMouse(e){
 
 //Cargar superheroe en grilla
 
-let seleccionarSuperheroe = document.getElementsByClassName("imgs");
-imgs.addEventListener("click",cargarSuperheroeEnGrilla);
+let pixelBatman = document.getElementById('batman');
+pixelBatman.addEventListener('click', function () {
+  cargarSuperheroe(batman);
+});
 
-function cargarSuperheroeEnGrilla(e,superheroe){
-  cargarSuperheroe(superheroe);
-}
+let pixelWonder = document.getElementById('wonder');
+pixelWonder.addEventListener('click', function(){
+  cargarSuperheroe(wonder);
+});
 
-//Guardar pixelArt
+let pixelFlash = document.getElementById('flash');
+pixelFlash.addEventListener('click', function(){
+  cargarSuperheroe(flash);
+});
 
-$("#guardar").click(guardarPixelArt);
+let pixelInvisible = document.getElementById('invisible');
+pixelInvisible.addEventListener('click', function(){
+  cargarSuperheroe(invisible);
+});
 
